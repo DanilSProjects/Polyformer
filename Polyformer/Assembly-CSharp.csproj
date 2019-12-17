@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterController2D.cs" />
+     <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/daniel/Desktop/UNITY/Polyformer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

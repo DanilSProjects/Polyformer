@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameController gc;
     public CharacterController2D controller;
     public float runSpeed = 40f;
-    
     float horizontalMove = 0f;
     bool jump = false;
 
@@ -23,6 +24,13 @@ public class PlayerMovement : MonoBehaviour
          jump = false;
     }
     public void onLanding() {
-        Debug.Log("Jumpin' done");
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "NextLvl") {
+            gc.loadNext();
+        }
     }
 }
