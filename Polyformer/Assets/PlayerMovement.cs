@@ -24,13 +24,15 @@ public class PlayerMovement : MonoBehaviour
          jump = false;
     }
     public void onLanding() {
-        
+        // land
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "NextLvl") {
             gc.loadNext();
+        } else if (other.tag == "Death") {
+            gc.retry();
         }
     }
 }
