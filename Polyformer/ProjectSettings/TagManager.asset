@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NextLvl
   - Death
+  - Letter
   layers:
   - Default
   - TransparentFX

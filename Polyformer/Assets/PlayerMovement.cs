@@ -29,10 +29,21 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "NextLvl") {
+        switch (other.tag) {
+            case "NextLvl":
             gc.loadNext();
-        } else if (other.tag == "Death") {
+            break;
+
+            case "Death":
             gc.retry();
+            break;
+
+            case "Letter":
+            Debug.Log("letter detect");
+            break;
+
+            default:
+            break;
         }
     }
 }
