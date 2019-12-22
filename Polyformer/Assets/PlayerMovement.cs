@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.tag) {
+
             case "NextLvl":
             gc.loadNext();
             break;
@@ -39,11 +40,23 @@ public class PlayerMovement : MonoBehaviour
             break;
 
             case "Letter":
-            Debug.Log("letter detect");
+            gc.isTouching = true;
             break;
 
             default:
             break;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        switch (other.tag) {
+            case "Letter":
+            gc.isTouching = false;
+            break;
+
+            default:
+            break;
+        }
+    }
+
 }

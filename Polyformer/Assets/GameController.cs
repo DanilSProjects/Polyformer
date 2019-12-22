@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject eCanvas;
+    public GameObject letterCanvas;
     public float delay = 0.3f;
+    int eNo = 0;
+    public bool isTouching = false;
     
     public void loadNext() {
         Invoke("nextLevel", delay);
@@ -18,4 +22,18 @@ public class GameController : MonoBehaviour
     public void retry() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    private void FixedUpdate() {
+        if (isTouching == true) {
+            if(Input.GetButtonDown("Interact")) {
+            eNo += 1;
+            if (eNo % 2 != 0) {
+                letterCanvas.SetActive(true);
+            } else {
+                letterCanvas.SetActive(false);
+            }
+            }
+        }
+    }
+
 }
