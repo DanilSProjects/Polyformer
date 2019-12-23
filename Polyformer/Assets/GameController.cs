@@ -23,17 +23,22 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void FixedUpdate() {
-        if (isTouching == true) {
-            if(Input.GetButtonDown("Interact")) {
-            eNo += 1;
-            if (eNo % 2 != 0) {
-                letterCanvas.SetActive(true);
-            } else {
-                letterCanvas.SetActive(false);
-            }
+    private void Update() {
+        if (eCanvas != null) {
+            if (isTouching == true) {
+                eCanvas.SetActive(true);
+                if(Input.GetButtonDown("Interact")) {
+                    eNo += 1;
+                    if (eNo % 2 != 0) {
+                        letterCanvas.SetActive(true);
+                    } else {
+                       letterCanvas.SetActive(false);
+                    }
+                 }
+             } else {
+            eCanvas.SetActive(false);
             }
         }
+        
     }
-
 }
