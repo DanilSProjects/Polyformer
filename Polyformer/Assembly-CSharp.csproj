@@ -53,9 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CharacterController2D.cs" />
-     <Compile Include="Assets\GameController.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\CoinInteraction.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/daniel/Desktop/UNITY/Polyformer/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/daniel/Desktop/UNITY/Polyformer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -64,6 +68,9 @@
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>/Users/daniel/Desktop/UNITY/Polyformer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/daniel/Desktop/UNITY/Polyformer/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/daniel/Desktop/UNITY/Polyformer/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
