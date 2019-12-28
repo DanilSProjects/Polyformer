@@ -593,6 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5550570adc4c547b0a1206eb3a00668f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plr: {fileID: 0}
   eCanvas: {fileID: 0}
   letterCanvas: {fileID: 0}
   delay: 0.1
@@ -1804,10 +1805,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06592ee91430e4651a521d9fdef4e035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2D: {fileID: 1911562004}
   gc: {fileID: 527517016}
   controller: {fileID: 1911562008}
   runSpeed: 100
-  coins: 0
+  canMove: 1
 --- !u!114 &1911562008
 MonoBehaviour:
   m_ObjectHideFlags: 0

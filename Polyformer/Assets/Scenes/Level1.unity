@@ -880,6 +880,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1563082303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2445087413793487698, guid: a3b8797e294654cb3b152b82e0f71c29,
+    type: 3}
+  m_PrefabInstance: {fileID: 2445087412955669573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06592ee91430e4651a521d9fdef4e035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570259062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +1904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5550570adc4c547b0a1206eb3a00668f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plr: {fileID: 1563082303}
   eCanvas: {fileID: 1591046150}
   letterCanvas: {fileID: 1455473679}
   delay: 0.3
@@ -1982,6 +1995,11 @@ PrefabInstance:
       propertyPath: gc
       value: 
       objectReference: {fileID: 1938674201}
+    - target: {fileID: 2445087413793487697, guid: a3b8797e294654cb3b152b82e0f71c29,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f7cdd539f261b442da0245c4a63b110b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b8797e294654cb3b152b82e0f71c29, type: 3}
 --- !u!1001 &6966643263286160855

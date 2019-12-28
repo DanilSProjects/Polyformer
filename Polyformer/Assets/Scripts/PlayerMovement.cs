@@ -5,24 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Rigidbody2D rb2D;
     public GameController gc;
     public CharacterController2D controller;
     public float runSpeed = 40f;
     float horizontalMove = 0f;
     bool jump = false;
     public static int coins = 0;
-
+    public bool canMove = true;
     void Update() {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump") && canMove == true) {
             jump = true;
         }
     }
 
     void FixedUpdate() {
         // Move our character
-         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-         jump = false;
+        if (canMove == true) {
+             rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+             controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+             jump = false;
+        } else {
+            rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
     }
     public void onLanding() {
         // land

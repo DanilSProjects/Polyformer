@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public PlayerMovement plr;
     public GameObject eCanvas;
     public GameObject letterCanvas;
     public float delay = 0.3f;
@@ -31,8 +32,10 @@ public class GameController : MonoBehaviour
                     eNo += 1;
                     if (eNo % 2 != 0) {
                         letterCanvas.SetActive(true);
+                        plr.canMove = false;
                     } else {
                        letterCanvas.SetActive(false);
+                       plr.canMove = true;
                     }
                  }
              } else {
