@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Vector3 origPos;
     public Rigidbody2D rb2D;
     public GameController gc;
     public CharacterController2D controller;
@@ -13,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     public static int coins = 0;
     public bool canMove = true;
+
+    private void Start() {
+        origPos = transform.position;
+    }
     void Update() {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if (Input.GetButtonDown("Jump") && canMove == true) {
@@ -43,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             break;
 
             case "Death":
-            gc.retry();
+            transform.position = origPos;
             break;
 
             case "Letter":
